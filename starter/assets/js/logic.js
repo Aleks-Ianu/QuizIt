@@ -1,4 +1,5 @@
 var timeEl = document.querySelector("#time");
+
 // access the html button and add an event listener that runs the timer function once clicked
 document.getElementById("start").addEventListener("click", function () {
   document.querySelector("#start-screen").classList.add("hide")
@@ -8,6 +9,7 @@ document.getElementById("start").addEventListener("click", function () {
    // Start a 120-second countdown, change the duration as needed
 });
 
+var allQuestionsAnswered = false;
 var seconds = 120;
 // countdown  function
 // needs to display new page once code runs out...(function?, attach it to the second javascript?)
@@ -15,11 +17,12 @@ function startCountdown() {
     var timerInterval = setInterval(function() {
         seconds--;
         timeEl.textContent = seconds;
-        if (seconds === 0 ) {
-            
+        if (seconds === 0 || allQuestionsAnswered) {
+
             clearInterval(timerInterval);
             document.querySelector("#questions").classList.add("hide");
             document.querySelector("#end-screen").classList.remove("hide");
+            document.querySelector("#final-score").textContent = seconds;
         }
     }, 1000);
 }

@@ -104,8 +104,7 @@ const questions = [
 
 
 var choicesDiv = document.querySelector("#choices");
-
-    var startQue = 0;
+var startQue = 0;
 
 // console.log(question1);
 function renderQuestions() {
@@ -137,10 +136,14 @@ choicesDiv.addEventListener("click", function(event) {
             document.querySelector("#feedback").textContent = "wrong answer";
             decurtSeconds();
         }
-    } 
-    choicesDiv.innerHTML = "";
-    startQue++;
-    renderQuestions();
+        if (startQue < questions.length -1) {
+            startQue++;
+            choicesDiv.innerHTML = "";
+            renderQuestions();
+        }  else {
+            allQuestionsAnswered = true;
+        }
+    }
 })
 
 // function that runs if the answer is wrong and takes 10 seconds out
