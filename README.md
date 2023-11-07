@@ -11,6 +11,9 @@ The application was made using javascript concepts as DOM manipulation and Local
 ## Visuals
 ![quizIt](<assets/QuizIt Screenshot.png>)
 
+Link deployed live URL :
+https://aleks-ianu.github.io/QuizIt/
+
 
 ## License
 
