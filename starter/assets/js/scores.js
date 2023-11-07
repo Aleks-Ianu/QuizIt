@@ -1,4 +1,3 @@
-// var highscor = document.querySelector("#highscores");
 function getScores() {
   var highscoresList = document.querySelector("#highscores");
   highscoresList.innerHTML = "";

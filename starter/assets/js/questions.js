@@ -82,9 +82,3 @@ const questions = [
   },
 ];
 
-// create a function that gets called when the timer starts
-// in the first function we put details of the first object
-// we then take an event listener that checks for clicks
-// condintional if the button pressed is the key value that we say its the answer
-// run the second function
-// else we take 10 seconds

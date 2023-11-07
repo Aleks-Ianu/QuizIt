@@ -6,12 +6,12 @@ document.getElementById("start").addEventListener("click", function () {
   document.querySelector("#questions").classList.remove("hide");
   startCountdown();
   renderQuestions();
-  // Start a 120-second countdown, change the duration as needed
 });
 
 var allQuestionsAnswered = false;
 var seconds = 120;
-// countdown  function
+
+// Start a 120-second countdown, change the duration as needed
 function startCountdown() {
   var timerInterval = setInterval(function () {
     seconds--;
@@ -51,6 +51,7 @@ function renderOptions() {
   }
 }
 
+//function to check if the clicked button is the one with the correct answer
 choicesDiv.addEventListener("click", function (event) {
   if (event.target.tagName === "BUTTON") {
     if (event.target.textContent === questions[startQue].trueAnswer) {
@@ -99,13 +100,3 @@ function setScores() {
 function loadScoreboard() {
   window.location.href = "highscores.html";
 }
-
-// get the timer working
-// as soon as the button gets pressed inside the countdown function display the first question
-// if1st question is true run second function
-// if its wrong you take 10seconds off and then run the second function
-// do everything using javascript and creating and appending elements on the screen with buttons.
-// every time you click on one of the buttons use conditionals to check if the answer given is the correct one or not
-// if the answer is correct, display the second one
-// else take 10 seconds off using seconds - 10 and display the next one
-// once the questions are finished
